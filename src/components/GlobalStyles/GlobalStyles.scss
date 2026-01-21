@@ -6,6 +6,8 @@
   --black: #000;
   --default-layout-header-height: 60px;
   --default-layout-width: 1150px;
+  --default-layout-horizontal-spacer: 24px;
+
   --text-color: #333;
   --white-cls: #fff;
 }
@@ -39,4 +41,25 @@ input,
 a[href] {
   color: var(--text-color);
   text-decoration: none;
+}
+
+// tippy toolip
+
+body {
+  .tippy-box {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    background-color: rgba(84, 84, 84, 0.92);
+  }
+  .tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
+  }
+  .tippy-box[data-placement^='bottom'] > .tippy-arrow {
+    top: -1px;
+  }
+  .tippy-content {
+    padding: 8px 9px;
+  }
 }
