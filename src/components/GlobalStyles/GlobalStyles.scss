@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
 
 :root {
   --primary: #fe2c55;
@@ -10,6 +9,54 @@
 
   --text-color: #333;
   --white-cls: #fff;
+
+  // Font styles
+  --tux-v2-font-display: TikTokDisplayFont, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+    sans-serif, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  --tux-v2-font-text: TikTokFont, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  --tux-web-font-body: 'TikTokFont', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+    sans-serif, 'Roboto', 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  --tux-v2-typography-bold-weight: 700;
+  --tux-v2-typography-semibold-weight: 500;
+  --tux-v2-typography-regular-weight: 400;
+  --tux-v2-typography-h1-size: 24px;
+  --tux-v2-typography-h1-line-height: 1.25em;
+  --tux-v2-typography-h1-letter-spacing: 0.01em;
+  --tux-v2-typography-h2-size: 20px;
+  --tux-v2-typography-h2-line-height: 1.25em;
+  --tux-v2-typography-h2-letter-spacing: 0.015em;
+  --tux-v2-typography-h3-size: 17px;
+  --tux-v2-typography-h3-line-height: 1.3em;
+  --tux-v2-typography-h3-letter-spacing: 0em;
+  --tux-v2-typography-h4-size: 15px;
+  --tux-v2-typography-h4-line-height: 1.3em;
+  --tux-v2-typography-h4-letter-spacing: 0.004em;
+  --tux-v2-typography-p1-size: 14px;
+  --tux-v2-typography-p1-line-height: 1.3em;
+  --tux-v2-typography-p1-letter-spacing: 0.0067em;
+  --tux-v2-typography-p2-size: 13px;
+  --tux-v2-typography-p2-line-height: 1.3em;
+  --tux-v2-typography-p2-letter-spacing: 0.0097em;
+  --tux-v2-typography-p3-size: 12px;
+  --tux-v2-typography-p3-line-height: 1.3em;
+  --tux-v2-typography-p3-letter-spacing: 0.0134em;
+  --tux-v2-typography-smalltext1-size: 11px;
+  --tux-v2-typography-smalltext1-line-height: 1.3em;
+  --tux-v2-typography-smalltext1-letter-spacing: 0.0177em;
+  --tux-v2-typography-smalltext2-size: 10px;
+  --tux-v2-typography-smalltext2-line-height: 1.3em;
+  --tux-v2-typography-smalltext2-letter-spacing: 0.0229em;
+  --tux-v2-typography-headline-size16px: 16px;
+  --tux-v2-typography-headline-line-height: 1.3em;
+  --tux-v2-typography-headline-letter-spacing: 0.0019em;
+  --tux-v2-typography-longform-size: 16px;
+  --tux-v2-typography-longform-line-height: 1.5em;
+  --tux-v2-typography-longform-letter-spacing: 0.0019em;
+  --tux-v2-typography-largetitle-size: 32px;
+  --tux-v2-typography-largetitle-line-height: 1.2em;
+  --tux-v2-typography-largetitle-letter-spacing: 0em;
 }
 
 * {
@@ -23,9 +70,7 @@ html {
 }
 
 body {
-  // font-family: "Montserrat", sans-serif;
-  font-family: 'Roboto', sans-serif;
-  // font-family: "Pacifico", cursive;
+  font-family: 'TikTokFont-Bold', sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
@@ -43,9 +88,29 @@ a[href] {
   text-decoration: none;
 }
 
+// Fonts emmbeded
+
+@font-face {
+  font-family: TikTokFont-Bold;
+  src: url('/assets/fonts/TikTok/TikTokFont-Bold.woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: TikTokFont-Regular;
+  src: url('/assets/fonts/TikTok/TikTokFont-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: TikTokFont-Semibold;
+  src: url('/assets/fonts/TikTok/TikTokFont-Semibold.woff2');
+  font-weight: 600;
+}
+
 // tippy toolip
 
 body {
+  // font-family: var(--tux-web-font-body);
   .tippy-box {
     border-radius: 8px;
     font-weight: 600;

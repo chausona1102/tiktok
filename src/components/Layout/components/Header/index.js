@@ -25,6 +25,7 @@ import style from './Header.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { GetAppIcon, UploadIcon } from '~/components/Icons';
 
 const cx = classNames.bind(style);
 
@@ -137,7 +138,7 @@ function Header() {
             <>
               <Tippy delay={200} content="Upload video" placement="bottom">
                 <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faCloudArrowUp} />
+                  <UploadIcon width="2rem" height="2rem" fill="black" />
                 </button>
               </Tippy>
             </>
